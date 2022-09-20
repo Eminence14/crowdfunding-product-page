@@ -36,6 +36,10 @@ body {
   display: none;
 }
 .navbar {
+    transform: scale(0);
+    display: none;
+ } 
+.navbar.active {
     display: flex;
     flex-direction: column;
     transition: 300ms ease-in;
@@ -45,7 +49,7 @@ body {
     width: 80%;
     z-index: 10;
     border-radius: 10px;
-    transform: translateX(-50%) scale(0);
+    transform: translateX(-50%) scale(1);
     background-color: white;
     overflow: hidden;
     box-shadow: 0 0 2px -1px black;
@@ -73,9 +77,9 @@ header img:not(:first-child) {
     position: relative;
     z-index: 13;
 }
-.navbar.active {
+/* .navbar.active {
     transform: translateX(-50%) scale(1);
-}
+} */
 .navbar a {
     color: black;
     padding: 20px;
@@ -149,12 +153,20 @@ section {
 .colored-btns {
   background-color: var(--modCyan);
   color: white;
+  cursor: pointer;
+}
+.colored-btns:hover {
+    background-color: var(--darkCyan);
 }
 #support-btn {
   width: 75%;
   height: 56px;
   border-radius: 30px;
   font-weight: 700;
+}
+#bookmark:hover {
+    opacity: .8;
+    cursor: pointer;
 }
 .bookmark-text {
   display: none;
@@ -268,8 +280,9 @@ section#section-c {
     display: none;
   }
   .navbar {
-    margin-right: 100px;
+    margin-right: 50px;
     display: block;
+    transform: scale(1);
   }
   .navbar a {
     color: white;
