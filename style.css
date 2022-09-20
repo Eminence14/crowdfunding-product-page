@@ -24,6 +24,7 @@
 body {
     font-family: Commissioner, sans-serif;
     font-size: 16px;
+    padding-bottom: 50px;
 }
 .top-container {
     position: relative;
@@ -163,4 +164,25 @@ section#section-c {
 .cards p.light-text {
     line-height: 1.6;
     margin-bottom: 30px;
+}
+.card-bottom p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-bottom .stat-num {
+    font-family: 'Commissioner Bold', sans-serif;
+    font-size: 2em;
+    margin-right: 10px;
+}
+.card-bottom .colored-btns {
+    height: 45px;
+    width: 65%;
+    border-radius: 30px;
+}
+.cards:last-child {
+    opacity: .4;
+}
+.cards:last-child .colored-btns {
+    background-color: var(--darkGray);
 }
