@@ -261,10 +261,13 @@ section#section-c {
     background-color: #f1f1f1;
   }
   .overall-container {
-    /* width: 750px; */
     width: 90%;
     max-width: 100%;
     margin: 0 auto;
+  }
+  main {
+    width: 700px;
+    max-width: 90%;
   }
 }
 
