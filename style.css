@@ -269,6 +269,12 @@ section#section-c {
     width: 700px;
     max-width: 90%;
   }
+  section {
+    padding: 0 1.5em 30px;
+  }
+  .card-bottom .colored-btns {
+    width: 50%;
+  }
 }
 
 /* desktop styles */
