@@ -36,23 +36,23 @@ body {
   display: none;
 }
 .navbar {
-    transform: scale(0);
-    display: none;
- } 
+  transform: scale(0);
+  display: none;
+}
 .navbar.active {
-    display: flex;
-    flex-direction: column;
-    transition: 300ms ease-in;
-    position: fixed;
-    top: 12%;
-    left: 50%;
-    width: 80%;
-    z-index: 10;
-    border-radius: 10px;
-    transform: translateX(-50%) scale(1);
-    background-color: white;
-    overflow: hidden;
-    box-shadow: 0 0 2px -1px black;
+  display: flex;
+  flex-direction: column;
+  transition: 300ms ease-in;
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  width: 80%;
+  z-index: 10;
+  border-radius: 10px;
+  transform: translateX(-50%) scale(1);
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0 2px -1px black;
 }
 header {
   position: absolute;
@@ -70,40 +70,40 @@ header img:not(:first-child) {
 }
 /* active hamburger */
 #hamburger.active {
-    display: none;
+  display: none;
 }
 #close-menu.active {
-    display: block;
-    position: relative;
-    z-index: 13;
+  display: block;
+  position: relative;
+  z-index: 13;
 }
 .navbar a {
-    color: black;
-    padding: 20px;
-    font-size: 1.2em;
-    font-weight: 700;
+  color: black;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 .navbar a:hover {
-    background-color: rgba(0,0,0, .03);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 .navbar a:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 #overlay {
-    opacity: 0;
-    position: fixed;
-    transition: 300ms ease-in-out;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 5;
-    background-color: rgba(0,0,0, .5);
-    pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  transition: 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 #overlay.active {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 /* hamburger ends */
 main {
@@ -153,7 +153,7 @@ section {
   cursor: pointer;
 }
 .colored-btns:hover {
-    background-color: var(--darkCyan);
+  background-color: var(--darkCyan);
 }
 #support-btn {
   width: 75%;
@@ -162,10 +162,11 @@ section {
   font-weight: 700;
 }
 #bookmark:hover {
-    opacity: .8;
-    cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
 }
-.bookmark-text, #bookmark-act {
+.bookmark-text,
+#bookmark-act {
   display: none;
 }
 .bookmark-text.active {
@@ -255,7 +256,6 @@ section#section-c {
   background-color: var(--darkGray);
 }
 
-
 /* Modal styles for mobile start */
 .modal {
   position: absolute;
@@ -266,7 +266,7 @@ section#section-c {
   border-radius: 10px;
   padding: 30px 1.2em;
   background-color: white;
-  transform: translate(-50%, -50%)  scale(0);
+  transform: translate(-50%, -50%) scale(0);
   transition: 300ms ease-in-out;
 }
 .modal.active {
@@ -280,7 +280,7 @@ section#section-c {
   height: 100%;
   width: 100%;
   transition: 300ms ease-in-out;
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
 }
@@ -341,7 +341,7 @@ section#section-c {
   margin: 15px 0;
 }
 .modal-card:last-child {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 /* Modal styles for mobile end */
@@ -371,6 +371,12 @@ section#section-c {
   .card-bottom .colored-btns {
     width: 50%;
   }
+
+  /* Modal styles for tablet start */
+  .modal {
+    width: 70%;
+  }
+  /* Modal styles for tablet end */
 }
 
 /* desktop styles */
@@ -397,7 +403,7 @@ section#section-c {
     text-decoration: underline;
   }
   .navbar a:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 0px;
   }
   main {
     margin-top: -90px;
@@ -437,7 +443,8 @@ section#section-c {
     margin-left: 15px;
     margin-right: 20px;
   }
-  .card-top, .card-bottom {
+  .card-top,
+  .card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -451,7 +458,42 @@ section#section-c {
 
   /* Modal styles for desktop start */
 
-  
+  .modal {
+    width: 60%;
+  }
+  .modal.active {
+    transform: translate(-50%, -12%) scale(1);
+  }
+  .modal-card {
+    position: relative;
+    padding: 30px 20px;
+  }
+  .modal-card-top {
+    margin-bottom: 20px;
+  }
+  .pledge-title {
+    display: flex;
+    align-items: center;
+  }
+  .modal-card p.small-headings {
+    margin-bottom: 0px;
+  }
+  .pledge-title .colored-headings {
+    margin-left: 20px;
+  }
+  .modal-card .card-bottom {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: .8em;
+  }
+  .modal-card .card-bottom span.light-text {
+    font-size: 1em;
+  }
+  .modal-card p.light-text {
+    padding-left: 50px;
+    /* margin-bottom: 30px; */
+  }
 
   /* Modal styles for desktop end */
 }
