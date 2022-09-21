@@ -269,6 +269,7 @@ section#section-c {
   main {
     width: 700px;
     max-width: 90%;
+    margin-top: -70px;
   }
   section {
     padding: 0 1.5em 30px;
