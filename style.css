@@ -256,19 +256,21 @@ section#section-c {
 }
 
 
-/* Modal styles */
+/* Modal styles for mobile start */
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 88%;
   z-index: 15;
-  transform: translate(-50%, -40%) scale(0);
-  background-color: white;
   border-radius: 10px;
+  padding: 30px 1.2em;
+  background-color: white;
+  transform: translate(-50%, -50%)  scale(0);
+  transition: 300ms ease-in-out;
 }
 .modal.active {
-  transform: translate(-50%, -40%) scale(1);
+  transform: translate(-50%, -20%) scale(1);
 }
 #overlay2 {
   position: fixed;
@@ -286,8 +288,63 @@ section#section-c {
   opacity: 1;
   pointer-events: all;
 }
+.modal-header {
+  font-size: 1.2em;
+  display: flex;
+  font-weight: 900;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal-header .close-modal {
+  font-size: 1.3em;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--darkGray);
+}
+.modal-body .light-text {
+  line-height: 1.6;
+}
+#modal-cards {
+  margin-top: 20px;
+}
+.modal-card {
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.modal-card-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.pledge {
+  border: 2px solid var(--darkGray);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.pledge-title {
+  margin-left: 15px;
+}
+.modal-card p.small-headings {
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+.modal-card p.colored-headings {
+  color: var(--modCyan);
+  font-weight: 600;
+}
+.modal-card .card-bottom {
+  margin: 15px 0;
+}
+.modal-card:last-child {
+  opacity: .4;
+}
 
-/* Modal styles end */
+/* Modal styles for mobile end */
 
 /* pseudo-tablet styles */
 @media screen and (min-width: 650px) {
@@ -391,4 +448,10 @@ section#section-c {
     font-size: 1em;
     font-weight: bold;
   }
+
+  /* Modal styles for desktop start */
+
+  
+
+  /* Modal styles for desktop end */
 }
