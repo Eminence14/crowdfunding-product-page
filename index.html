@@ -11,6 +11,7 @@
 <body>
   <!-- <a href="javascript:window.open('http://127.0.0.1:5500/index.html', '', 'width=375px, height=auto')">window</a> -->
   <div id="overlay"></div>
+  <div id="overlay2" class="active"></div>
   <div class="overall-container">
     <div class="top-container">
       <picture class="header-image">
@@ -38,7 +39,8 @@
         <div class="support">
           <button id="support-btn" class="colored-btns">Back this project</button>
           <div id="bookmark">
-            <img src="./images/icon-bookmark.svg" alt="" class="bookmark">
+            <img src="./images/icon-bookmark.svg" alt="" class="bookmark" id="bookmark-ord">
+            <img src="./images/icon-bookmark-active.svg" alt="" class="bookmark" id="bookmark-act">
             <span class="bookmark-text">Bookmark</span>
           </div>
         </div>
@@ -60,9 +62,9 @@
             <div class="light-text">days left</div>
           </div>
         </div>
-          <div id="progress">
-            <div id="inner-progress"></div>
-          </div>
+        <div id="progress">
+          <div id="inner-progress"></div>
+        </div>
       </section>
       <section id="section-c">
         <h3 class="small-headings" id="project">About this project</h3>
@@ -121,23 +123,100 @@
         </div>
       </section>
     </main>
+
+    <div class="modal active">
+      <div class="modal-header">
+        <div class="headings">Back this project</div>
+        <p class="close-modal">&times;</p>
+      </div>
+      <div class="modal-body">
+        <p class="light-text">
+          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+        </p>
+        <div id="modal-cards">
+
+          <div class="modal-card">
+            <div class="modal-card-top">
+              <div class="pledge">
+                <div class="inner-pledge"></div>
+              </div>
+              <div class="pledge-title">
+                <p class="small-headings">Pledge with no reward</p>
+              </div>
+            </div>
+            <p class="light-text">
+              Choose to support us without a reward if you simply believe in our project. As a backer,
+              you will be signed up to receive product updates via email.
+            </p>
+            <div class="card-bottom">
+              <p> <span class="stat-num"> 101 </span><span class="light-text">left</span></p>
+            </div>
+          </div>
+
+          <div class="modal-card">
+            <div class="modal-card-top">
+              <div class="pledge">
+                <div class="inner-pledge"></div>
+              </div>
+              <div class="pledge-title">
+                <p class="small-headings">Bamboo Stand</p>
+                <p class="colored-headings">Pledge $25 or more</p>
+              </div>
+            </div>
+            <p class="light-text">
+              You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+              you’ll be added to a special Backer member list.
+            </p>
+            <div class="card-bottom">
+              <p> <span class="stat-num"> 101 </span><span class="light-text">left</span></p>
+            </div>
+          </div>
+
+          <div class="modal-card">
+            <div class="modal-card-top">
+              <div class="pledge">
+                <div class="inner-pledge"></div>
+              </div>
+              <div class="pledge-title">
+                <p class="small-headings">Black Edition Stand</p>
+                <p class="colored-headings">Pledge $75 or more</p>
+              </div>
+            </div>
+            <p class="light-text">
+              You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+              member list. Shipping is included.
+            </p>
+            <div class="card-bottom">
+              <p> <span class="stat-num"> 64 </span><span class="light-text">left</span></p>
+            </div>
+          </div>
+
+          <div class="modal-card">
+            <div class="modal-card-top">
+              <div class="pledge">
+                <div class="inner-pledge"></div>
+              </div>
+              <div class="pledge-title">
+                <p class="small-headings">Mahogany Special Edition</p>
+                <p class="colored-headings">Pledge $200 or more</p>
+              </div>
+            </div>
+            <p class="light-text">
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+              to our Backer member list. Shipping is included.
+            </p>
+            <div class="card-bottom">
+              <p> <span class="stat-num"> 0 </span><span class="light-text">left</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
 
   <!-- Selection modal start 
-
-  Back this project
-  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
-
-  Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer,
-  you will be signed up to receive product updates via email.
-
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list.
-  101 left
 
   <!-- Selected pledge start 
   Enter your pledge
@@ -145,23 +224,11 @@
   Continue
   <!-- Selected pledge end 
 
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left
-
   <!-- Selected pledge start 
   Enter your pledge
   $75
   Continue
   <!-- Selected pledge end 
-
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
 
   <!-- Selected pledge  start 
   Enter your pledge

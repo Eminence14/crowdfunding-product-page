@@ -1,6 +1,6 @@
 :root {
   --modCyan: hsl(176, 50%, 47%);
-  --darkCyan: hsl(176, 72%, 28%);
+  --darkCyan: #147b74;
   --darkGray: rgb(122, 122, 122);
 }
 * {
@@ -165,8 +165,11 @@ section {
     opacity: .8;
     cursor: pointer;
 }
-.bookmark-text {
+.bookmark-text, #bookmark-act {
   display: none;
+}
+.bookmark-text.active {
+  color: var(--darkCyan);
 }
 section#section-b {
   padding-top: 30px;
@@ -251,6 +254,40 @@ section#section-c {
 .cards:last-child .colored-btns {
   background-color: var(--darkGray);
 }
+
+
+/* Modal styles */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  z-index: 15;
+  transform: translate(-50%, -40%) scale(0);
+  background-color: white;
+  border-radius: 10px;
+}
+.modal.active {
+  transform: translate(-50%, -40%) scale(1);
+}
+#overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  transition: 300ms ease-in-out;
+  background-color: rgba(0,0,0, .5);
+  opacity: 0;
+  pointer-events: none;
+}
+#overlay2.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal styles end */
 
 /* pseudo-tablet styles */
 @media screen and (min-width: 650px) {
