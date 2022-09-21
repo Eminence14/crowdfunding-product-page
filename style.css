@@ -77,9 +77,6 @@ header img:not(:first-child) {
     position: relative;
     z-index: 13;
 }
-/* .navbar.active {
-    transform: translateX(-50%) scale(1);
-} */
 .navbar a {
     color: black;
     padding: 20px;
@@ -261,9 +258,13 @@ section#section-c {
     background-color: #f1f1f1;
   }
   .overall-container {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
+  }
+  #header-bg {
+    height: 500px;
+    width: 100%;
   }
   main {
     width: 700px;
