@@ -26,8 +26,8 @@ gotIt.addEventListener('click', closeVot)
 
 selectReward.forEach(rew => {
     rew.addEventListener('click', () => {
-        vot.classList.add('active')
-        overlay3.classList.add('active')
+        modal.classList.add('active')
+        overlay2.classList.add('active')
     })
 })
 
