@@ -130,7 +130,7 @@ img#mastercraft {
 section {
   margin-bottom: 20px;
   padding: 0 1em;
-  border: 1px solid #eee;
+  border: 1px solid var(--darkGray);
   padding-bottom: 30px;
   border-radius: 10px;
   background-color: white;
@@ -224,7 +224,7 @@ section#section-c {
 }
 .cards {
   padding: 1em;
-  border: 1px solid #eee;
+  border: 1px solid var(--darkGray);
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -332,7 +332,7 @@ section#section-c {
   margin-top: 20px;
 }
 .modal-card {
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--darkGray);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -346,7 +346,7 @@ section#section-c {
   margin-bottom: 30px;
 }
 .pledge {
-  border: 2px solid #dcdcdc;
+  border: 2px solid var(--darkGray);
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -414,7 +414,7 @@ section#section-c {
 /* Selected mobile modal style  starts */
 .modal-selected {
   display: none;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid var(--darkGray);
   margin: 0 -20px;
   padding: 30px 20px 0;
   text-align: center;
@@ -434,7 +434,7 @@ p.pledge-selected {
   border-radius: 30px;
 }
 button.amount-btn {
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--darkGray);
   margin-right: 10px;
 }
 button.amount-btn .dollar-sign {
