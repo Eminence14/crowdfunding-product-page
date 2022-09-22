@@ -288,6 +288,22 @@ section#section-c {
   opacity: 1;
   pointer-events: all;
 }
+#overlay3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  height: 100%;
+  width: 100%;
+  transition: 300ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+#overlay3.active {
+  opacity: 1;
+  pointer-events: all;
+}
 .modal-header {
   font-size: 1.2em;
   display: flex;
@@ -313,6 +329,9 @@ section#section-c {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+.modal-card.active {
+  border: 1px solid var(--modCyan);
 }
 .modal-card-top {
   display: flex;
@@ -353,9 +372,40 @@ section#section-c {
   opacity: 0.4;
 }
 
+/* Vote of thanks starts */
+.vot {
+  position: fixed;
+  padding: 30px 20px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+.vot.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.vot p.headings {
+  margin: 20px 0 30px;
+}
+.vot .light-text {
+  line-height: 1.8;
+}
+.vot .colored-btns {
+  height: 45px;
+  width: 35%;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+/* Vote of thanks ends */
+
 /* Selected mobile modal style  starts */
 .modal-selected {
-  /* display: none; */
+  display: none;
   border-top: 1px solid #dcdcdc;
   margin: 0 -20px;
   padding: 30px 20px 0;
@@ -415,6 +465,9 @@ button.amount-btn .dollar-sign {
   /* Modal styles for tablet start */
   .modal {
     width: 70%;
+  }
+  .vot.active {
+    width: 75%;
   }
   /* Modal styles for tablet end */
 }
@@ -532,8 +585,28 @@ button.amount-btn .dollar-sign {
   }
   .modal-card p.light-text {
     padding-left: 50px;
-    /* margin-bottom: 30px; */
   }
+  .vot.active {
+    width: 45%;
+  }
+
+  /* Selected desktop modal style starts */
+
+.modal-selected {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.modal-selected.active {
+  display: flex;
+}
+.amount-selected {
+  display: flex;
+  width: 45%;
+}
+
+  /* Selected desktop modal style ends */
 
   /* Modal styles for desktop end */
 }
