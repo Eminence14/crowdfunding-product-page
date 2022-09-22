@@ -169,6 +169,12 @@ section {
 #bookmark-act {
   display: none;
 }
+#bookmark-ord.active {
+  display: none;
+}
+#bookmark-act.active {
+  display: block;
+}
 .bookmark-text.active {
   color: var(--darkCyan);
 }
@@ -292,7 +298,7 @@ section#section-c {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 15;
+  z-index: 18;
   height: 100%;
   width: 100%;
   transition: 300ms ease-in-out;

@@ -9,12 +9,19 @@ const close = document.getElementById('close-menu')
 const navbar = document.querySelector('.navbar')
 const pledge = document.querySelectorAll('.pledge')
 const innerPledge = document.querySelectorAll('.inner-pledge')
-
-
-
+const votEnd = document.querySelectorAll('.continue')
+const vot = document.querySelector('.vot')
+const gotIt = document.querySelector('.got-it')
+const bookmark = document.getElementById('bookmark')
+const bookmarkOrd = document.querySelector('#bookmark-ord')
+const bookmarkAct = document.querySelector('#bookmark-act')
+const bookmarkText = document.querySelector('.bookmark-text')
 
 overlay2.addEventListener('click', closeModal)
 closeModalBtn.addEventListener('click', closeModal)
+
+overlay3.addEventListener('click', closeVot)
+gotIt.addEventListener('click', closeVot)
 
 pledge.forEach(pled => {
     pled.addEventListener('click', togglePledge)
@@ -23,6 +30,15 @@ pledge.forEach(pled => {
 innerPledge.forEach(innPled => {
     innPled.addEventListener('click', toggleInnerPledge)
 })
+
+votEnd.forEach(cont => {
+    cont.addEventListener('click', () => {
+        overlay3.classList.add('active')
+        vot.classList.add('active')
+    })
+})
+
+
 supportBtn.addEventListener('click', () => {
     modal.classList.add('active')
     overlay2.classList.add('active')
@@ -33,6 +49,17 @@ hamburger.addEventListener('click', () => {
     navbar.classList.add('active')
     close.classList.add('active')
     overlay.classList.add('active')
+})
+
+bookmark.addEventListener('click', () => {
+    bookmarkAct.classList.toggle('active')
+    bookmarkOrd.classList.toggle('active')
+    bookmarkText.classList.toggle('active')
+    if (bookmarkText.classList.contains('active')) {
+        bookmarkText.textContent = 'Bookmarked'
+    } else {
+        bookmarkText.textContent = 'Bookmark'
+    }
 })
 
 close.addEventListener('click', closeHamburger)
@@ -67,4 +94,9 @@ function closeHamburger() {
 function closeModal() {
     modal.classList.remove('active')
     overlay2.classList.remove('active')
+}
+
+function closeVot() {
+    overlay3.classList.remove('active')
+    vot.classList.remove('active')
 }
