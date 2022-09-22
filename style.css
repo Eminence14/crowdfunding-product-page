@@ -257,7 +257,7 @@ section#section-c {
   border-radius: 30px;
 }
 .cards:last-child {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .cards:last-child .colored-btns {
   background-color: var(--darkGray);
@@ -376,7 +376,8 @@ section#section-c {
   margin: 15px 0;
 }
 .modal-card:last-child {
-  opacity: 0.4;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /* Vote of thanks starts */
