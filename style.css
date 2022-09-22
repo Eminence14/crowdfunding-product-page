@@ -159,6 +159,7 @@ section {
   width: 75%;
   height: 56px;
   border-radius: 30px;
+  font-size: .9em;
   font-weight: 700;
 }
 #bookmark:hover {
@@ -436,7 +437,7 @@ button.amount-btn {
   margin-right: 10px;
 }
 button.amount-btn .dollar-sign {
-  color: #dcdcdc;
+  color: var(--darkGray);
 }
 /* Selected mobile modal style  ends */
 
@@ -506,7 +507,7 @@ button.amount-btn .dollar-sign {
   }
   main {
     margin-top: -90px;
-    width: 720px;
+    width: 820px;
     max-width: 60%;
   }
   section {
@@ -593,7 +594,8 @@ button.amount-btn .dollar-sign {
     padding-left: 50px;
   }
   .vot.active {
-    width: 45%;
+    width: 40%;
+    font-size: 1.1em;
   }
 
   /* Selected desktop modal style starts */

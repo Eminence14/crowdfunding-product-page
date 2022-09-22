@@ -16,12 +16,20 @@ const bookmark = document.getElementById('bookmark')
 const bookmarkOrd = document.querySelector('#bookmark-ord')
 const bookmarkAct = document.querySelector('#bookmark-act')
 const bookmarkText = document.querySelector('.bookmark-text')
+const selectReward = document.querySelectorAll('.select-reward')
 
 overlay2.addEventListener('click', closeModal)
 closeModalBtn.addEventListener('click', closeModal)
 
 overlay3.addEventListener('click', closeVot)
 gotIt.addEventListener('click', closeVot)
+
+selectReward.forEach(rew => {
+    rew.addEventListener('click', () => {
+        vot.classList.add('active')
+        overlay3.classList.add('active')
+    })
+})
 
 pledge.forEach(pled => {
     pled.addEventListener('click', togglePledge)
